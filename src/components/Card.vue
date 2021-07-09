@@ -14,24 +14,7 @@
           class="card-item__bg"
         />
       </div>
-      <div class="card-item__wrapper">
-        <div class="card-item__top">
-          <img
-            src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png"
-            class="card-item__chip"
-          />
-          <div class="card-item__type">
-            <transition name="slide-fade-up">
-              <img
-                :src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + cardType + '.png'"
-                v-if="cardType"
-                :key="cardType"
-                alt
-                class="card-item__typeImg"
-              />
-            </transition>
-          </div>
-        </div>
+
         <label :for="fields.cardNumber" class="card-item__number" :ref="fields.cardNumber">
           <template>
             <span v-for="(n, $index) in currentPlaceholder" :key="$index">
@@ -102,13 +85,7 @@
         <div class="card-item__cvvBand">
           <span v-for="(n, $index) in labels.cardCvv" :key="$index">*</span>
         </div>
-        <div class="card-item__type">
-          <img
-            :src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + cardType + '.png'"
-            v-if="cardType"
-            class="card-item__typeImg"
-          />
-        </div>
+
       </div>
     </div>
   </div>
